@@ -117,13 +117,13 @@ Refer to `references/example-nieqian.md` for a complete example of this structur
 
 ## Step 6 — Write the work order
 
-Assemble the work order markdown:
+Assemble the work order markdown. **The section headings are a contract** — novel-promo (the downstream skill) parses `## 钩子版（30秒）` and `## 完整版（3分钟）` to extract the two scripts. Keep the headings exactly as shown:
 
 ```markdown
 # <book-title> - <YYYY-MM-DD>
 
 **book_id**: <id>
-**别名**: <4-char alias>
+**别名**: <alias-A> / <alias-B>
 **素材章节**: <第X-Y章>
 **音频估算时长**: 钩子版 ~30秒 / 完整版 ~3分钟
 
@@ -131,18 +131,22 @@ Assemble the work order markdown:
 
 ## 钩子版（30秒）
 
-<hook script>
+<hook script text here, plain text, no markdown formatting>
 
 ---
 
 ## 完整版（3分钟）
 
-<full script>
+<full script text here, plain text, no markdown formatting>
 ```
 
-Write to `<out-path>/<book-title>_<date>.md`. Use the book title from scouted.json; strip characters unsafe for filenames (？/ etc.).
+Rules for the script text inside each section:
+- **Plain text only** — no `**bold**`, no bullet points, no headings. novel-promo reads everything between the section heading and the next `---` as the script.
+- **Each script is one continuous block** — don't insert blank lines or sub-headings within it (narrate-video's sentence splitter handles paragraphing internally).
 
-**Done when** the markdown file exists at the path and contains all fields filled (no placeholders).
+Write to `<out-path>/<book-title>_<date>.md`. Use the book title from scouted.json; strip characters unsafe for filenames (？/！/ etc.).
+
+**Done when** the markdown file exists at the path, contains both `## 钩子版（30秒）` and `## 完整版（3分钟）` headings, and each section has script text (no placeholders).
 
 ## Step 7 — Report
 
