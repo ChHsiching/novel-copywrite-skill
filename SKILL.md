@@ -60,15 +60,23 @@ Record the person. The hook and full scripts must use it consistently.
 
 ## Step 3 — Suggest the alias
 
-Suggest a **4-character** promotion alias. Rules:
+Suggest **two candidate aliases** in different styles, so the user can pick. The hard constraint is passing 番茄's duplicate check — aliases too similar to the book title, character names, or hot titles get rejected with "与热门作品/作者/主演角色名相似度高".
 
-- **Exactly 4 characters** — not 3, not 5. Four is the sweet spot for typing from memory after hearing it once.
-- **Common characters only** — no 生僻字. If the book title has 玖/柒/栀/玦/玥/氿, rephrase using common characters.
-- **Pull from the hook** — the alias should echo the core conflict or setup, not a late-book reveal. The viewer hears the alias in the hook script; it must connect to what they just heard.
+Rules:
+- **Exactly 4 characters** each — not 3, not 5. Four is the sweet spot for typing from memory after hearing it once.
+- **Common characters only** — no 生僻字. If a candidate would need 玖/柒/栀/玦/玥, rephrase using common characters.
+- **Pass the duplicate check** — avoid any 2-char substring that appears in the book title, the main characters' names, or common genre phrases (穿书/重生/反派/系统/豪门 are all high-collision).
+- **Provide two styles**:
+  - **Style A — 关联型 (related)**: derived from a unique prop, scene, or running gag in the first 3 chapters — NOT from the title or character names. Connects to what the viewer heard in the hook, but via a side door (an object, an action, a phrase) rather than the title's own words.
+  - **Style B — 无关型 (unrelated)**: a completely unrelated but memorable + unique 4-char phrase. Functions like a password — its only job is being easy to remember, easy to spell, and unique enough to pass the duplicate check. No connection to the plot needed.
 
-Example: 《穿书反派，把阴湿女主养成病娇了》 → `反派养女主` (4 common chars, from the hook).
+The user picks one and applies for it on 达人中心 themselves.
 
-**Done when** you have a 4-char alias using common characters, derived from the hook.
+Example for 《穿书反派，把阴湿女主养成病娇了》:
+- Style A: `剪刀不剪了` (from the opening-scene prop — protagonist throws the scissors instead of cutting)
+- Style B: `绿茗茶香` (unrelated, but unique + all common chars + easy to type)
+
+**Done when** you have two 4-char candidates, each using common characters, each unlikely to trip the duplicate check (no 2-char substring overlap with the title/character names).
 
 ## Step 4 — Write the hook script (30-second version)
 
